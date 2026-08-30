@@ -43,7 +43,6 @@ graph TD
     D --> E[Topological Sorting Algorithm]
     E --> F[Milestone Path Generation]
     F --> G[Dynamic Interactive Roadmap]
-end
 ```
 
 ### 2. Adaptive Course Assessments
