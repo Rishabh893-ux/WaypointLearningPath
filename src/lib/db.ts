@@ -54,7 +54,8 @@ type DBShape = {
   assessments: Record<string, Record<string, AssessmentAttempt>>;
 };
 
-const dataDir = path.join(process.cwd(), "data");
+const isVercel = process.env.VERCEL === "1" || process.env.NODE_ENV === "production";
+const dataDir = isVercel ? path.join("/tmp", "data") : path.join(process.cwd(), "data");
 const dbPath = path.join(dataDir, "store.json");
 
 function emptyDB(): DBShape {
