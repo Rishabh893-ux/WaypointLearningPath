@@ -402,24 +402,6 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
                   <button
                     onClick={() => {
                       setShowMenu(false);
-                      window.location.href = "/login";
-                    }}
-                    className="block w-full text-left px-4 py-2 text-sm text-[var(--text)] hover:bg-[var(--panel-alt)] transition-colors"
-                  >
-                    Log In / Switch Key
-                  </button>
-                  <button
-                    onClick={() => {
-                      setShowMenu(false);
-                      handleCopyKey();
-                    }}
-                    className="block w-full text-left px-4 py-2 text-sm text-[var(--text)] hover:bg-[var(--panel-alt)] transition-colors"
-                  >
-                    Copy Learner Key
-                  </button>
-                  <button
-                    onClick={() => {
-                      setShowMenu(false);
                       setShowLogoutModal(true);
                     }}
                     className="block w-full text-left px-4 py-2 text-sm text-[var(--danger)] hover:bg-[var(--panel-alt)] transition-colors"
@@ -451,15 +433,8 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
             </div>
             
             <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-              Are you sure you want to log out? Any local progress will be lost unless you've saved your <strong className="text-[var(--text)] font-mono">Learner Key</strong>.
+              Are you sure you want to log out? Any local progress will be lost.
             </p>
-
-            <div className="bg-[var(--panel-alt)] rounded-lg p-3 border border-[var(--border)] flex items-center justify-between">
-              <span className="text-[10px] font-mono tracking-widest text-[var(--text-muted)] uppercase">Your Key:</span>
-              <button onClick={handleCopyKey} className="text-xs font-semibold text-[var(--accent)] hover:underline">
-                Copy Key to Clipboard
-              </button>
-            </div>
 
             <div className="flex gap-3 pt-2">
               <button
