@@ -121,9 +121,8 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   // Auth and modal states
   const [showMenu, setShowMenu] = useState(false);
   const [showSidebarMenu, setShowSidebarMenu] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [learnerId, setLearnerId] = useState("");
-  const [loginKeyInput, setLoginKeyInput] = useState("");
   const { showToast } = useToast();
 
   useEffect(() => {
@@ -180,11 +179,8 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         body: JSON.stringify({ action: "logout" }),
       });
       if (res.ok) {
-        showToast("Logged out! Starting new session...", "success");
-        setShowLoginModal(false);
-        setTimeout(() => {
-          window.location.reload();
-        }, 800);
+        setShowLogoutModal(false);
+        window.location.href = "/login";
       } else {
         showToast("Logout failed", "error");
       }
@@ -406,7 +402,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
                   <button
                     onClick={() => {
                       setShowMenu(false);
-                      setShowLoginModal(true);
+                      window.location.href = "/login";
                     }}
                     className="block w-full text-left px-4 py-2 text-sm text-[var(--text)] hover:bg-[var(--panel-alt)] transition-colors"
                   >
@@ -424,9 +420,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
                   <button
                     onClick={() => {
                       setShowMenu(false);
-                      if (confirm("Log out? Any local progress will be lost unless you save your Learner Key.")) {
-                        handleLogout();
-                      }
+                      setShowLogoutModal(true);
                     }}
                     className="block w-full text-left px-4 py-2 text-sm text-[var(--danger)] hover:bg-[var(--panel-alt)] transition-colors"
                   >
@@ -445,79 +439,40 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         </footer>
       </div>
 
-      {/* Account Settings / Key Restore Modal */}
-      {showLoginModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm animate-[fadeIn_0.2s_ease]">
-          <div className="card max-w-md w-full p-6 space-y-4 m-4 relative animate-[pageFade_0.25s_ease]">
-            <button
-              onClick={() => setShowLoginModal(false)}
-              className="absolute top-4 right-4 text-sm text-[var(--text-muted)] hover:text-[var(--text)]"
-            >
-              ✕
-            </button>
-            <h3 className="font-display text-lg">Manage Account Key</h3>
-
-            <div className="space-y-1">
-              <label className="text-[10px] mono text-[var(--text-muted)] uppercase tracking-wider block">
-                Your Current Learner Key
-              </label>
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  readOnly
-                  value={learnerId}
-                  className="flex-1 bg-[var(--panel-alt)] border border-[var(--border)] rounded-md px-3 py-1.5 text-xs outline-none select-all font-mono"
-                />
-                <button
-                  onClick={handleCopyKey}
-                  className="px-3 py-1.5 rounded-md text-xs border border-[var(--border)] hover:border-[var(--accent)] font-medium transition-colors"
-                >
-                  Copy
-                </button>
+      {/* Logout Confirmation Modal */}
+      {showLogoutModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-[fadeIn_0.2s_ease]">
+          <div className="card max-w-sm w-full p-6 space-y-5 m-4 relative animate-[pageFade_0.25s_ease]">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-[var(--danger-soft)] text-[var(--danger)] text-xl">
+                ⚠
               </div>
-              <p className="text-[10px] text-[var(--text-muted)] leading-relaxed">
-                Copy this key to save your progress. You can use it to log in on any device.
-              </p>
+              <h3 className="font-display text-lg font-semibold">Log Out?</h3>
+            </div>
+            
+            <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+              Are you sure you want to log out? Any local progress will be lost unless you've saved your <strong className="text-[var(--text)] font-mono">Learner Key</strong>.
+            </p>
+
+            <div className="bg-[var(--panel-alt)] rounded-lg p-3 border border-[var(--border)] flex items-center justify-between">
+              <span className="text-[10px] font-mono tracking-widest text-[var(--text-muted)] uppercase">Your Key:</span>
+              <button onClick={handleCopyKey} className="text-xs font-semibold text-[var(--accent)] hover:underline">
+                Copy Key to Clipboard
+              </button>
             </div>
 
-            <div className="border-t border-[var(--border)] pt-4 space-y-2">
-              <label className="text-[10px] mono text-[var(--text-muted)] uppercase tracking-wider block">
-                Log In with Key / Switch Profile
-              </label>
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  placeholder="Paste Learner Key UUID here"
-                  value={loginKeyInput}
-                  onChange={(e) => setLoginKeyInput(e.target.value)}
-                  className="flex-1 bg-[var(--panel-alt)] border border-[var(--border)] rounded-md px-3 py-1.5 text-xs outline-none focus:border-[var(--accent)] font-mono"
-                />
-                <button
-                  onClick={handleLogin}
-                  className="px-4 py-1.5 rounded-md text-xs font-semibold text-white transition-transform hover:scale-[1.03] active:scale-[0.97]"
-                  style={{ background: "var(--gradient-accent)" }}
-                >
-                  Log In
-                </button>
-              </div>
-            </div>
-
-            <div className="border-t border-[var(--border)] pt-4 flex justify-between gap-4">
+            <div className="flex gap-3 pt-2">
               <button
-                onClick={() => {
-                  if (confirm("Are you sure you want to log out and start a fresh session? Any local data will be lost unless you saved your current key.")) {
-                    handleLogout();
-                  }
-                }}
-                className="px-4 py-2 rounded-md text-xs font-semibold text-white bg-[var(--danger)] hover:opacity-90 transition-transform active:scale-[0.97]"
+                onClick={() => setShowLogoutModal(false)}
+                className="flex-1 px-4 py-2.5 rounded-lg text-sm font-medium border border-[var(--border)] hover:bg-[var(--panel-alt)] transition-colors"
               >
-                Log Out / Reset
+                Cancel
               </button>
               <button
-                onClick={() => setShowLoginModal(false)}
-                className="px-4 py-2 rounded-md text-xs border border-[var(--border)] hover:bg-[var(--panel-alt)] font-medium transition-colors"
+                onClick={handleLogout}
+                className="flex-1 px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-[var(--danger)] hover:opacity-90 transition-transform active:scale-[0.97] shadow-[0_4px_14px_rgba(169,50,38,0.3)]"
               >
-                Close
+                Yes, Log Out
               </button>
             </div>
           </div>
