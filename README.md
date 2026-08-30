@@ -1,190 +1,119 @@
-# Waypoint — AI-Powered Personalized Learning Path Recommender
+# 🧭 Waypoint: AI-Powered Personalized Learning Path Recommender
 
-> **Suggested Repository Name:** `waypoint-learning-path` or `waypoint-ai-recommender`
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Gemini](https://img.shields.io/badge/Gemini%20API-Flash%202.5-orange?style=flat-square&logo=google-gemini)](https://ai.google.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-A conversational assistant that turns a learner's goals, interests, and
-experience level into a structured, prerequisite-ordered learning
-roadmap — with plain-language explanations for every recommendation and
-a dashboard that adapts as the learner completes or skips courses.
+A conversational AI assistant that transforms a learner's raw goals, background, and specific interests into a structured, topologically-sorted educational roadmap. Designed with a premium **"Mahogany & Sunset"** theme, featuring glassmorphism, responsive visual graphs, and gamified progress tracking.
 
-Recently overhauled with a premium "Mahogany & Sunset" UI theme, featuring glassmorphism, animated progress rings, and a rewarding achievements system.
+---
 
-## What it does
+## 🌟 Key Features
 
-- **Chat intake** (`/`) — describe your goal in plain English; the app
-  extracts your profile (goal, experience level, interests) and shows it
-  live in the "field notes" panel. Includes quick-start suggestion chips
-  for a fresh session. Features a premium glassmorphism chat interface.
-- **Roadmap** (`/roadmap`) — a personalized, ordered learning path
-  rendered as a winding trail with milestones. Every course expands into
-  its own **detailed syllabus** (modules, topics, learning outcomes), a
-  suggested hands-on **practice project**, and a **graded assessment**
-  you take inline. Passing an assessment (≥70%) automatically marks the
-  course complete — completion is verified, not an honor-system
-  checkbox. Includes a dedicated **"Ask about your roadmap"** assistant
-  for follow-up questions (why this order, can I skip ahead, etc.).
-- **Dashboard** (`/dashboard`) — A premium command center showing completion stats, hours studied, a
-  skill-coverage radar by domain, and a per-milestone progress tracker with animated progress rings.
-- **Skills** (`/skills`) — Track your proficiency across domains (Mastered, Developing, Weak, Missing) with gradient progress bars and a live search filter.
-- **Achievements** (`/achievements`) — A gamified progress tracker showing your current Level, XP, study streak, and unlocked badges (with flip-card animations and glowing progress bars).
+| Feature | Description | Screen/Route |
+| :--- | :--- | :--- |
+| **Intelligent Chat Intake** | Describe goals in natural language. Auto-extracts tags, background, and goals to build a live persona profile. | `/` |
+| **Interactive Roadmaps** | Ordered winding milestones displaying real courses, syllabi, recommended practice projects, and inline tests. | `/roadmap` |
+| **Dynamic Dashboard** | Premium command center showcasing completion rates, hours spent, progress milestones, and interactive graphs. | `/dashboard` |
+| **Skill Registry** | Filter and search through your skills categorized dynamically as Mastered, Developing, Weak, or Missing. | `/skills` |
+| **Gamified Achievements** | Level up, gain XP, track active daily streaks, and flip cards to reveal customized progress badges. | `/achievements` |
 
-## How course assessments work
+---
 
-Each course ships with a 3-module syllabus and 3 learning outcomes
-(`data/courses.json`). When a learner clicks "Take assessment":
+## ⚙️ How it Works
 
-1. Gemini generates 5 multiple-choice questions grounded in that
-   course's syllabus and outcomes (not generic trivia).
-2. Correct answers are kept server-side only — the client never
-   receives them until after grading.
-3. Submitting grades against the stored attempt and requires **70%** to
-   pass. A pass auto-updates `completedCourseIds`, which feeds back into
-   the recommendation engine's `prerequisiteReadiness` term — so
-   completing a course by assessment, not just by button-click, is what
-   unlocks the courses that depend on it.
-4. **No Gemini key?** A deterministic fallback builds questions directly
-   from the syllabus topics (e.g. "which topic belongs to module X?"
-   with distractors from other modules), so assessments work fully
-   offline too.
-
-## How the recommendation engine works
-
-The scoring is deterministic and fully explainable (no black-box
-embedding step to defend in a viva):
+### 1. Hybrid Recommendation & Sorting Engine
+Unlike black-box LLM systems, Waypoint uses a hybrid approach: **deterministic calculations** for scoring and ranking, and **Gemini API** for semantic natural language tasks. This ensures reliability, speed, and absolute explainability.
 
 ```
-relevance = 0.7 x goalTagOverlap + 0.3 x interestTagOverlap   (Jaccard similarity)
-score     = relevance x (0.5 + 0.5 x prerequisiteReadiness)
+Relevance Score = (0.7 × Goal Tag Overlap) + (0.3 × Interest Tag Overlap)
+Final Score     = Relevance Score × (0.5 + 0.5 × Prerequisite Readiness)
 ```
 
-- `goalTagOverlap` / `interestTagOverlap`: overlap between the course's
-  tags and tags extracted from the learner's stated goal / interests.
-- `prerequisiteReadiness`: 1.0 if every prerequisite is already
-  completed, scaled down for each missing one.
-- Relevance **gates** the score — an unrelated course scores 0
-  regardless of how prerequisite-ready it is, so only on-topic courses
-  are ever recommended.
+- **Relevance Gating:** If a course matches no goals/interests, its score drops to zero, filtering out irrelevant catalog items immediately.
+- **Topological Sorting:** Top-scoring courses are sorted so prerequisites are guaranteed to appear before the courses that require them.
 
-The top-scoring courses are then **topologically sorted** so
-prerequisites always appear before the courses that need them, and
-grouped into milestones of two courses each.
-
-Gemini is used for the parts that genuinely need natural language:
-extracting structured profile fields from free text, writing the "why
-this course" explanations, and the conversational replies. Everything
-else (scoring, ordering, dashboard math) is plain deterministic code —
-intentionally, so the AI/ML component is real but the system doesn't
-depend on an LLM to be reliable or explainable.
-
-## Tech stack
-
-- **Next.js 14** (App Router, TypeScript) — frontend + API routes in one app
-- **JSON file store** (`data/store.json`) — zero-config, zero native dependencies, works on any OS with no build tools required
-- **Gemini API** (`gemini-2.5-flash`, free tier) — conversation, extraction, explanations
-- **Recharts** — dashboard visualizations
-- **Tailwind CSS v4** — styling, custom design tokens (no external font fetches, so it builds anywhere)
-
-## Setup
-
-Requires Node.js 18+.
-
-```bash
-npm install
-cp .env.example .env
+```mermaid
+graph TD
+    A[Stated Goal / Interests] --> B[Gemini NLP Profile Extraction]
+    B --> C[Keyword Vocabulary Matching]
+    C --> D[Deterministic Course Scoring]
+    D --> E[Topological Sorting Algorithm]
+    E --> F[Milestone Path Generation]
+    F --> G[Dynamic Interactive Roadmap]
+end
 ```
 
-Open `.env` and add a free Gemini API key (optional — see below):
+### 2. Adaptive Course Assessments
+Rather than relying on honor-system checks:
+- **Assessment Generation:** Generates 5 structured, contextual multiple-choice questions grounded in each course's unique syllabus.
+- **Secure Verification:** Correct answers are withheld server-side. Pass grades ($\ge 70\%$) update the student database, immediately recalculating your prerequisite readiness score to unlock advanced courses on the roadmap.
+- **Robust Fallbacks:** Works completely offline! If no Gemini API key is found, the system dynamically queries syllabus modules to auto-generate valid assessment choices locally.
 
-```
-GEMINI_API_KEY=your-key-here
-```
+---
 
-Get a free key at https://aistudio.google.com/apikey — no credit card
-required. Free tier: `gemini-2.5-flash` gives ~1,500 requests/day, more
-than enough for a demo.
-
-**No API key? The app still fully works.** Without `GEMINI_API_KEY` set,
-profile extraction falls back to keyword matching against the course
-tag vocabulary, and explanations are replaced with a short notice
-instead of AI-generated text. Every other feature — profiling,
-scoring, path generation, the dashboard — is unaffected. This was a
-deliberate design choice so the app is demoable offline / without
-quota risk.
-
-## Run it
-
-```bash
-npm run dev
-```
-
-Visit http://localhost:3000. Talk to the chat about what you want to
-learn (e.g. "I know basic Python and want to learn machine learning"),
-then go to **Roadmap** to see your generated path, and **Dashboard** to
-track progress.
-
-To reset your data (start over as a fresh learner), delete
-`data/app.db` and refresh — a new anonymous session cookie will be
-issued automatically.
-
-## Production build
-
-```bash
-npm run build
-npm run start
-```
-
-## Deploying
-
-The easiest free option is **Vercel**:
-
-1. Push this repo to GitHub.
-2. Import it at https://vercel.com/new.
-3. Add the `GEMINI_API_KEY` environment variable in the Vercel project
-   settings (optional, per above).
-4. Deploy.
-
-Note: the data layer writes to a local JSON file (`data/store.json`),
-which works on Vercel but resets on every redeploy since the
-filesystem isn't persistent across deploys. That's fine for a
-demo/judging environment; for a persistent production deployment,
-swap `src/lib/db.ts` for a hosted database (e.g. Turso, Postgres) —
-the rest of the app is unaffected since all data access goes through
-that one file.
-
-## Project structure
+## 🛠️ Project Structure
 
 ```
 src/
-  app/
-    page.tsx               chat intake
-    roadmap/page.tsx        roadmap trail view
-    dashboard/page.tsx      progress dashboard
-    api/
-      chat/route.ts          conversational intake + profile extraction
-      profile/route.ts       read/update learner profile
-      roadmap/route.ts       generate/fetch the learning path
-      roadmap-qa/route.ts    AI assistant Q&A scoped to the current roadmap
-      assessment/route.ts    generate a course assessment (correct answers withheld)
-      assessment/submit/route.ts  grade a submitted assessment, auto-complete on pass
-      feedback/route.ts      mark course complete/in-progress/skipped
-      dashboard/route.ts     aggregate stats for the dashboard
-  lib/
-    db.ts                   JSON store schema + learner/assessment helpers
-    courses.ts              scoring engine + path generation
-    gemini.ts               Gemini service wrapper (chat, extraction, explanations, assessments)
-    session.ts              anonymous cookie-based learner session
-data/
-  courses.json              seed dataset: 28 courses across 6 domains
+├── app/
+│   ├── page.tsx               # Chat intake & profile extraction interface
+│   ├── roadmap/page.tsx       # Roadmap trail visualization & interactive path
+│   ├── dashboard/page.tsx     # Progress telemetry and recharts visualization
+│   ├── skills/page.tsx        # Searchable skill progress tracking
+│   ├── achievements/page.tsx  # Gamified milestones, streak data, & badges
+│   └── api/                   # Serverless route handlers (Chat, Profiles, Roadmap Q&A, Tests)
+├── components/                # Shared layout & reusable UI elements (AppShell, RoadmapGraph, etc.)
+└── lib/                       # Core engines (Gemini integrations, topological sorters, local DB wrappers)
 ```
 
-## Known limitations / honest notes for the solution doc
+---
 
-- Single-learner-per-browser via an anonymous cookie — no auth, by
-  design, to keep the demo frictionless.
-- The course catalog is a curated seed dataset (28 courses, 6 domains),
-  not a live integration with a real course platform — swapping in a
-  real catalog would be a drop-in replacement of `data/courses.json`.
-- Tag extraction from free text uses substring matching as a fallback
-  and Gemini-based extraction as the primary path; a production system
-  would likely add a proper NER/classification step for more robust
-  parsing.
+## 🚀 Setup & Installation
+
+Ensure you have **Node.js 18+** installed.
+
+### 1. Clone & Install Dependencies
+```bash
+git clone https://github.com/Rishabh893-ux/Waypoint-Learning-Path.git
+cd Waypoint-Learning-Path
+npm install
+```
+
+### 2. Configure Environment Variables
+Copy the template file:
+```bash
+cp .env.example .env
+```
+
+Open `.env` and add your **Gemini API Key**:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+> 💡 *Note: You can get a free key with no credit card required at [Google AI Studio](https://aistudio.google.com/).*
+
+### 3. Run the Development Server
+```bash
+npm run dev
+```
+Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+---
+
+## 📡 Deployment
+
+The application is fully compatible with **Vercel** serverless deploys:
+
+1. Import your cloned GitHub repository into Vercel.
+2. In the project build settings, add `GEMINI_API_KEY` as an environment variable.
+3. Deploy!
+
+*(Note: Data is saved to `data/store.json`. Since Vercel uses ephemeral filesystems, user profiles reset upon redeploy. For persistent production use, you can easily adapt `src/lib/db.ts` to interface with a hosted DB like Postgres or SQLite/Turso.)*
+
+---
+
+## 📝 License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for details.
