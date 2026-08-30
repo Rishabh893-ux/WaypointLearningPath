@@ -33,7 +33,7 @@ type SkillCounts = { mastered: number; developing: number; weak: number; missing
 function useCountUp(target: number, duration = 900) {
   const [display, setDisplay] = useState(0);
   const startRef = useRef<number | null>(null);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (target === 0) { setDisplay(0); return; }

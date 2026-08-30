@@ -653,7 +653,7 @@ function StudyNotes({
   const [open, setOpen] = useState(false);
   const [note, setNote] = useState(initialNote);
   const [saved, setSaved] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   // sync if parent passes down new initial value
   useEffect(() => {
