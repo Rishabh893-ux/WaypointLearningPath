@@ -158,6 +158,61 @@
       "studyHoursPerWeek": null,
       "createdAt": "2026-08-30T19:56:53.118Z",
       "updatedAt": "2026-08-30T19:56:53.118Z"
+    },
+    "a08d30b4-6c92-4f60-920c-793df30e3cd5": {
+      "id": "a08d30b4-6c92-4f60-920c-793df30e3cd5",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T19:57:47.623Z",
+      "updatedAt": "2026-08-30T19:57:47.623Z"
+    },
+    "fa4ec13a-10b5-4cad-a153-bee5e28b4534": {
+      "id": "fa4ec13a-10b5-4cad-a153-bee5e28b4534",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T19:57:47.635Z",
+      "updatedAt": "2026-08-30T19:57:47.635Z"
+    },
+    "82536aa1-0005-45b1-9607-2a7c89c491c2": {
+      "id": "82536aa1-0005-45b1-9607-2a7c89c491c2",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T19:57:47.780Z",
+      "updatedAt": "2026-08-30T19:57:47.780Z"
+    },
+    "3cb8377d-8967-4df9-a411-c7c7fb028f1e": {
+      "id": "3cb8377d-8967-4df9-a411-c7c7fb028f1e",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T19:57:47.789Z",
+      "updatedAt": "2026-08-30T19:57:47.789Z"
+    },
+    "13702d64-6caa-4948-a8c8-6835bf2e9946": {
+      "id": "13702d64-6caa-4948-a8c8-6835bf2e9946",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T19:58:52.281Z",
+      "updatedAt": "2026-08-30T19:58:52.281Z"
     }
   },
   "messages": {

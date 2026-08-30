@@ -237,6 +237,10 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     </>
   );
 
+  if (pathname === "/login") {
+    return <>{children}</>;
+  }
+
   return (
     <div className="min-h-screen md:flex">
       {/* Mobile top bar */}
