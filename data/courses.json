@@ -1,0 +1,1271 @@
+[
+  {
+    "id": "web-html-css",
+    "title": "HTML & CSS Foundations",
+    "domain": "Web Development",
+    "tags": [
+      "html",
+      "css",
+      "web",
+      "frontend",
+      "beginner"
+    ],
+    "difficulty": 1,
+    "durationHrs": 12,
+    "prerequisites": [],
+    "description": "Structure and style web pages from scratch: semantic HTML, the box model, flexbox and grid layouts.",
+    "project": "Build a personal portfolio landing page using only semantic HTML and CSS Grid/Flexbox.",
+    "syllabus": [
+      {
+        "title": "Semantic HTML",
+        "topics": [
+          "Document structure",
+          "Semantic tags vs divs",
+          "Forms & accessibility basics"
+        ]
+      },
+      {
+        "title": "CSS Foundations",
+        "topics": [
+          "Box model",
+          "Selectors & specificity",
+          "Typography & color systems"
+        ]
+      },
+      {
+        "title": "Layout Systems",
+        "topics": [
+          "Flexbox",
+          "CSS Grid",
+          "Responsive breakpoints"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Structure a page with correct semantic HTML",
+      "Build responsive layouts with Flexbox and Grid",
+      "Debug CSS specificity and cascade issues"
+    ]
+  },
+  {
+    "id": "web-js-basics",
+    "title": "JavaScript Essentials",
+    "domain": "Web Development",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "programming",
+      "beginner"
+    ],
+    "difficulty": 2,
+    "durationHrs": 18,
+    "prerequisites": [
+      "web-html-css"
+    ],
+    "description": "Core JavaScript: variables, functions, DOM manipulation, events, and asynchronous code.",
+    "project": "Build an interactive to-do list app with local state and DOM events.",
+    "syllabus": [
+      {
+        "title": "Core Syntax",
+        "topics": [
+          "Variables & types",
+          "Functions & scope",
+          "Arrays & objects"
+        ]
+      },
+      {
+        "title": "The DOM",
+        "topics": [
+          "Selecting & mutating elements",
+          "Event handling",
+          "Forms & validation"
+        ]
+      },
+      {
+        "title": "Async JavaScript",
+        "topics": [
+          "Callbacks",
+          "Promises",
+          "async/await & fetch"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Manipulate the DOM in response to user events",
+      "Write and reason about asynchronous code",
+      "Fetch and render data from an API"
+    ]
+  },
+  {
+    "id": "web-react",
+    "title": "React for Interfaces",
+    "domain": "Web Development",
+    "tags": [
+      "react",
+      "javascript",
+      "frontend",
+      "components",
+      "intermediate"
+    ],
+    "difficulty": 3,
+    "durationHrs": 20,
+    "prerequisites": [
+      "web-js-basics"
+    ],
+    "description": "Build component-based UIs with React: hooks, state, props, and client-side routing.",
+    "project": "Build a component-based weather dashboard that fetches and displays live data.",
+    "syllabus": [
+      {
+        "title": "Components & JSX",
+        "topics": [
+          "JSX syntax",
+          "Props",
+          "Composition patterns"
+        ]
+      },
+      {
+        "title": "State & Effects",
+        "topics": [
+          "useState",
+          "useEffect & lifecycle",
+          "Lifting state up"
+        ]
+      },
+      {
+        "title": "Routing & Data",
+        "topics": [
+          "Client-side routing",
+          "Fetching data in components",
+          "Forms in React"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Build a component tree with clean prop/state boundaries",
+      "Manage side effects and data fetching correctly",
+      "Ship a multi-page client-rendered app"
+    ]
+  },
+  {
+    "id": "web-nextjs",
+    "title": "Full-Stack Apps with Next.js",
+    "domain": "Web Development",
+    "tags": [
+      "nextjs",
+      "react",
+      "fullstack",
+      "ssr",
+      "intermediate"
+    ],
+    "difficulty": 4,
+    "durationHrs": 22,
+    "prerequisites": [
+      "web-react"
+    ],
+    "description": "Server rendering, API routes, and deployment patterns for production Next.js apps.",
+    "project": "Build and deploy a full-stack blog with server-rendered pages and API routes.",
+    "syllabus": [
+      {
+        "title": "App Router Fundamentals",
+        "topics": [
+          "File-based routing",
+          "Server vs client components",
+          "Layouts & metadata"
+        ]
+      },
+      {
+        "title": "Data & APIs",
+        "topics": [
+          "API routes",
+          "Data fetching patterns",
+          "Caching & revalidation"
+        ]
+      },
+      {
+        "title": "Shipping to Production",
+        "topics": [
+          "Environment config",
+          "Deploying to Vercel",
+          "Performance basics"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Structure a full-stack app with the App Router",
+      "Build and consume API routes",
+      "Deploy a production Next.js app"
+    ]
+  },
+  {
+    "id": "web-node-express",
+    "title": "Backend APIs with Node & Express",
+    "domain": "Web Development",
+    "tags": [
+      "node",
+      "express",
+      "backend",
+      "api",
+      "intermediate"
+    ],
+    "difficulty": 3,
+    "durationHrs": 16,
+    "prerequisites": [
+      "web-js-basics"
+    ],
+    "description": "Design REST APIs, handle auth, and connect a Node/Express server to a database.",
+    "project": "Build a REST API for a notes app with CRUD endpoints and basic auth.",
+    "syllabus": [
+      {
+        "title": "Server Fundamentals",
+        "topics": [
+          "HTTP basics",
+          "Express routing",
+          "Middleware"
+        ]
+      },
+      {
+        "title": "Building APIs",
+        "topics": [
+          "REST conventions",
+          "Request validation",
+          "Error handling"
+        ]
+      },
+      {
+        "title": "Auth & Security",
+        "topics": [
+          "Sessions vs tokens",
+          "Password hashing",
+          "Basic rate limiting"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Design a REST API with proper status codes and errors",
+      "Implement authentication on an Express server",
+      "Structure middleware for cross-cutting concerns"
+    ]
+  },
+  {
+    "id": "web-databases",
+    "title": "Databases for Web Apps (SQL + Prisma)",
+    "domain": "Web Development",
+    "tags": [
+      "sql",
+      "database",
+      "backend",
+      "prisma",
+      "intermediate"
+    ],
+    "difficulty": 3,
+    "durationHrs": 14,
+    "prerequisites": [
+      "web-node-express"
+    ],
+    "description": "Relational modelling, SQL queries, and using an ORM to connect apps to a database.",
+    "project": "Model and query a small e-commerce schema (users, products, orders) with Prisma.",
+    "syllabus": [
+      {
+        "title": "Relational Modelling",
+        "topics": [
+          "Entities & relationships",
+          "Normalization",
+          "Keys & constraints"
+        ]
+      },
+      {
+        "title": "SQL",
+        "topics": [
+          "Joins",
+          "Aggregation",
+          "Indexes & query performance"
+        ]
+      },
+      {
+        "title": "ORMs",
+        "topics": [
+          "Schema definition with Prisma",
+          "Migrations",
+          "Querying from Node"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Design a normalized relational schema",
+      "Write joins and aggregate SQL queries confidently",
+      "Connect a Node app to a database via an ORM"
+    ]
+  },
+  {
+    "id": "py-basics",
+    "title": "Python Fundamentals",
+    "domain": "Data & AI",
+    "tags": [
+      "python",
+      "programming",
+      "beginner"
+    ],
+    "difficulty": 1,
+    "durationHrs": 14,
+    "prerequisites": [],
+    "description": "Syntax, data structures, functions, and file handling in Python.",
+    "project": "Build a command-line expense tracker that reads/writes to a CSV file.",
+    "syllabus": [
+      {
+        "title": "Syntax & Data Types",
+        "topics": [
+          "Variables & control flow",
+          "Lists, dicts, tuples",
+          "Functions"
+        ]
+      },
+      {
+        "title": "Working with Files",
+        "topics": [
+          "Reading/writing files",
+          "CSV & JSON",
+          "Error handling"
+        ]
+      },
+      {
+        "title": "Modules & Tooling",
+        "topics": [
+          "Virtual environments",
+          "Standard library tour",
+          "pip & packages"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Write clean, idiomatic Python scripts",
+      "Read, transform, and write structured data files",
+      "Manage dependencies with a virtual environment"
+    ]
+  },
+  {
+    "id": "data-analysis",
+    "title": "Data Analysis with Pandas",
+    "domain": "Data & AI",
+    "tags": [
+      "python",
+      "pandas",
+      "data",
+      "analysis",
+      "intermediate"
+    ],
+    "difficulty": 2,
+    "durationHrs": 16,
+    "prerequisites": [
+      "py-basics"
+    ],
+    "description": "Clean, transform, and analyse tabular data using pandas and NumPy.",
+    "project": "Clean and analyze a public dataset (e.g. Kaggle) to answer 3 concrete questions.",
+    "syllabus": [
+      {
+        "title": "pandas Fundamentals",
+        "topics": [
+          "Series & DataFrames",
+          "Indexing & filtering",
+          "GroupBy"
+        ]
+      },
+      {
+        "title": "Cleaning Data",
+        "topics": [
+          "Missing values",
+          "Type conversion",
+          "Merging datasets"
+        ]
+      },
+      {
+        "title": "Analysis Workflow",
+        "topics": [
+          "Descriptive statistics",
+          "Pivot tables",
+          "Exporting results"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Clean and reshape messy tabular data",
+      "Answer analytical questions using groupby/aggregation",
+      "Produce a reproducible analysis notebook"
+    ]
+  },
+  {
+    "id": "data-viz",
+    "title": "Data Visualization",
+    "domain": "Data & AI",
+    "tags": [
+      "visualization",
+      "python",
+      "matplotlib",
+      "data",
+      "intermediate"
+    ],
+    "difficulty": 2,
+    "durationHrs": 10,
+    "prerequisites": [
+      "data-analysis"
+    ],
+    "description": "Communicate insight with matplotlib, seaborn, and dashboard design principles.",
+    "project": "Build a 3-chart dashboard summarizing a dataset you've already analyzed.",
+    "syllabus": [
+      {
+        "title": "Chart Fundamentals",
+        "topics": [
+          "matplotlib basics",
+          "Choosing the right chart",
+          "Labeling & annotation"
+        ]
+      },
+      {
+        "title": "Statistical Plots",
+        "topics": [
+          "seaborn distributions",
+          "Correlation heatmaps",
+          "Categorical comparisons"
+        ]
+      },
+      {
+        "title": "Dashboard Design",
+        "topics": [
+          "Layout principles",
+          "Color & accessibility",
+          "Storytelling with data"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Choose appropriate chart types for a dataset",
+      "Build statistical visualizations with seaborn",
+      "Assemble a small multi-chart dashboard"
+    ]
+  },
+  {
+    "id": "ml-foundations",
+    "title": "Machine Learning Foundations",
+    "domain": "Data & AI",
+    "tags": [
+      "machine-learning",
+      "python",
+      "statistics",
+      "intermediate"
+    ],
+    "difficulty": 3,
+    "durationHrs": 24,
+    "prerequisites": [
+      "data-analysis"
+    ],
+    "description": "Supervised and unsupervised learning, model evaluation, and scikit-learn workflows.",
+    "project": "Train and evaluate a classifier on a tabular dataset, then explain the metrics.",
+    "syllabus": [
+      {
+        "title": "Core Concepts",
+        "topics": [
+          "Supervised vs unsupervised",
+          "Train/test split",
+          "Bias-variance tradeoff"
+        ]
+      },
+      {
+        "title": "Classic Algorithms",
+        "topics": [
+          "Linear/logistic regression",
+          "Decision trees",
+          "k-NN & clustering"
+        ]
+      },
+      {
+        "title": "Evaluation",
+        "topics": [
+          "Accuracy, precision, recall",
+          "Cross-validation",
+          "Confusion matrices"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Train and evaluate a scikit-learn model end to end",
+      "Choose the right metric for a problem",
+      "Diagnose overfitting vs underfitting"
+    ]
+  },
+  {
+    "id": "deep-learning",
+    "title": "Deep Learning Foundations",
+    "domain": "Data & AI",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "python",
+      "advanced"
+    ],
+    "difficulty": 4,
+    "durationHrs": 28,
+    "prerequisites": [
+      "ml-foundations"
+    ],
+    "description": "Neural network fundamentals, training dynamics, and building models with PyTorch.",
+    "project": "Train a small image classifier on a subset of CIFAR-10 with PyTorch.",
+    "syllabus": [
+      {
+        "title": "Neural Network Basics",
+        "topics": [
+          "Perceptrons & layers",
+          "Activation functions",
+          "Backpropagation"
+        ]
+      },
+      {
+        "title": "Training Dynamics",
+        "topics": [
+          "Loss functions",
+          "Optimizers",
+          "Regularization & dropout"
+        ]
+      },
+      {
+        "title": "PyTorch in Practice",
+        "topics": [
+          "Tensors & autograd",
+          "Building a training loop",
+          "Saving/loading models"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Explain how backpropagation updates weights",
+      "Build and train a neural net in PyTorch",
+      "Diagnose training issues from loss curves"
+    ]
+  },
+  {
+    "id": "genai-llm",
+    "title": "Generative AI & LLM Applications",
+    "domain": "Data & AI",
+    "tags": [
+      "genai",
+      "llm",
+      "prompt-engineering",
+      "advanced"
+    ],
+    "difficulty": 4,
+    "durationHrs": 18,
+    "prerequisites": [
+      "ml-foundations"
+    ],
+    "description": "Prompting, embeddings, RAG pipelines, and building applications on top of LLM APIs.",
+    "project": "Build a small RAG app that answers questions over a folder of your own notes.",
+    "syllabus": [
+      {
+        "title": "Prompting",
+        "topics": [
+          "Prompt structure",
+          "Few-shot examples",
+          "Structured output"
+        ]
+      },
+      {
+        "title": "Embeddings & Retrieval",
+        "topics": [
+          "Vector embeddings",
+          "Similarity search",
+          "Chunking strategies"
+        ]
+      },
+      {
+        "title": "Building RAG Apps",
+        "topics": [
+          "RAG architecture",
+          "Grounding & citations",
+          "Evaluating LLM output"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Write reliable, structured prompts",
+      "Explain how embeddings power semantic search",
+      "Build a basic retrieval-augmented app"
+    ]
+  },
+  {
+    "id": "nlp-basics",
+    "title": "Natural Language Processing Basics",
+    "domain": "Data & AI",
+    "tags": [
+      "nlp",
+      "python",
+      "text",
+      "intermediate"
+    ],
+    "difficulty": 3,
+    "durationHrs": 16,
+    "prerequisites": [
+      "ml-foundations"
+    ],
+    "description": "Tokenization, embeddings, classic NLP tasks, and an intro to transformer models.",
+    "project": "Build a sentiment classifier for product reviews and report accuracy.",
+    "syllabus": [
+      {
+        "title": "Text Preprocessing",
+        "topics": [
+          "Tokenization",
+          "Stopwords & stemming",
+          "Bag-of-words / TF-IDF"
+        ]
+      },
+      {
+        "title": "Classic NLP Tasks",
+        "topics": [
+          "Text classification",
+          "Named entity recognition",
+          "Sentiment analysis"
+        ]
+      },
+      {
+        "title": "Intro to Transformers",
+        "topics": [
+          "Attention (conceptually)",
+          "Pretrained embeddings",
+          "Using a Hugging Face pipeline"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Preprocess raw text for modelling",
+      "Train a text classifier and evaluate it",
+      "Use a pretrained transformer pipeline"
+    ]
+  },
+  {
+    "id": "cloud-fundamentals",
+    "title": "Cloud Computing Fundamentals",
+    "domain": "Cloud & DevOps",
+    "tags": [
+      "cloud",
+      "infrastructure",
+      "beginner"
+    ],
+    "difficulty": 1,
+    "durationHrs": 10,
+    "prerequisites": [],
+    "description": "Core cloud concepts: compute, storage, networking, and the shared responsibility model.",
+    "project": "Deploy a static site to a cloud provider and document the architecture.",
+    "syllabus": [
+      {
+        "title": "Core Concepts",
+        "topics": [
+          "Compute vs storage vs networking",
+          "Regions & availability zones",
+          "Shared responsibility model"
+        ]
+      },
+      {
+        "title": "Core Services",
+        "topics": [
+          "Virtual machines",
+          "Object storage",
+          "Managed databases"
+        ]
+      },
+      {
+        "title": "Cost & Security Basics",
+        "topics": [
+          "Pricing models",
+          "IAM basics",
+          "Monitoring & alerts"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Explain core cloud service categories",
+      "Reason about basic cost and security tradeoffs",
+      "Provision a simple cloud resource"
+    ]
+  },
+  {
+    "id": "docker-basics",
+    "title": "Containers with Docker",
+    "domain": "Cloud & DevOps",
+    "tags": [
+      "docker",
+      "containers",
+      "devops",
+      "intermediate"
+    ],
+    "difficulty": 2,
+    "durationHrs": 12,
+    "prerequisites": [
+      "cloud-fundamentals"
+    ],
+    "description": "Build, run, and ship containerized applications with Docker.",
+    "project": "Containerize an existing app with a Dockerfile and docker-compose.",
+    "syllabus": [
+      {
+        "title": "Container Fundamentals",
+        "topics": [
+          "Images vs containers",
+          "Writing a Dockerfile",
+          "Layers & caching"
+        ]
+      },
+      {
+        "title": "Running Containers",
+        "topics": [
+          "Volumes",
+          "Networking",
+          "Environment configuration"
+        ]
+      },
+      {
+        "title": "Multi-container Apps",
+        "topics": [
+          "docker-compose",
+          "Service dependencies",
+          "Local dev workflows"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Write an efficient Dockerfile",
+      "Run and network multiple containers together",
+      "Use docker-compose for a local dev environment"
+    ]
+  },
+  {
+    "id": "ci-cd",
+    "title": "CI/CD Pipelines",
+    "domain": "Cloud & DevOps",
+    "tags": [
+      "cicd",
+      "devops",
+      "automation",
+      "intermediate"
+    ],
+    "difficulty": 3,
+    "durationHrs": 12,
+    "prerequisites": [
+      "docker-basics"
+    ],
+    "description": "Automate testing and deployment with GitHub Actions style pipelines.",
+    "project": "Set up a pipeline that runs tests and deploys on every push to main.",
+    "syllabus": [
+      {
+        "title": "Pipeline Fundamentals",
+        "topics": [
+          "Build/test/deploy stages",
+          "Triggers",
+          "Secrets management"
+        ]
+      },
+      {
+        "title": "Automated Testing",
+        "topics": [
+          "Running tests in CI",
+          "Test reporting",
+          "Fail-fast strategies"
+        ]
+      },
+      {
+        "title": "Deployment Automation",
+        "topics": [
+          "Environments (staging/prod)",
+          "Rollbacks",
+          "Zero-downtime deploys"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Design a CI pipeline with build/test/deploy stages",
+      "Automate testing on every push",
+      "Ship a safe, automated deployment flow"
+    ]
+  },
+  {
+    "id": "kubernetes-intro",
+    "title": "Kubernetes Essentials",
+    "domain": "Cloud & DevOps",
+    "tags": [
+      "kubernetes",
+      "orchestration",
+      "devops",
+      "advanced"
+    ],
+    "difficulty": 4,
+    "durationHrs": 20,
+    "prerequisites": [
+      "docker-basics"
+    ],
+    "description": "Deploy and scale containerized workloads with Kubernetes.",
+    "project": "Deploy a multi-container app to a local Kubernetes cluster (minikube/kind).",
+    "syllabus": [
+      {
+        "title": "Core Objects",
+        "topics": [
+          "Pods & deployments",
+          "Services",
+          "ConfigMaps & secrets"
+        ]
+      },
+      {
+        "title": "Scaling & Scheduling",
+        "topics": [
+          "Replicas & autoscaling",
+          "Resource requests/limits",
+          "Node scheduling basics"
+        ]
+      },
+      {
+        "title": "Operating a Cluster",
+        "topics": [
+          "kubectl workflows",
+          "Rolling updates",
+          "Debugging pods"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Deploy an app to Kubernetes with correct manifests",
+      "Scale and update a deployment safely",
+      "Debug a failing pod using kubectl"
+    ]
+  },
+  {
+    "id": "ux-basics",
+    "title": "UX Design Foundations",
+    "domain": "Design",
+    "tags": [
+      "ux",
+      "design",
+      "beginner"
+    ],
+    "difficulty": 1,
+    "durationHrs": 10,
+    "prerequisites": [],
+    "description": "User research basics, wireframing, and usability heuristics.",
+    "project": "Run a 5-user usability test on an existing app and write up findings.",
+    "syllabus": [
+      {
+        "title": "User Research",
+        "topics": [
+          "Interviews",
+          "Personas",
+          "Journey mapping"
+        ]
+      },
+      {
+        "title": "Wireframing",
+        "topics": [
+          "Low-fidelity sketches",
+          "Information architecture",
+          "Usability heuristics"
+        ]
+      },
+      {
+        "title": "Testing & Iteration",
+        "topics": [
+          "Usability testing basics",
+          "Gathering feedback",
+          "Iterating on designs"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Run a basic user interview and synthesize findings",
+      "Wireframe a flow using sound information architecture",
+      "Apply Nielsen's heuristics to critique a design"
+    ]
+  },
+  {
+    "id": "ui-design-systems",
+    "title": "UI & Design Systems",
+    "domain": "Design",
+    "tags": [
+      "ui",
+      "design-systems",
+      "figma",
+      "intermediate"
+    ],
+    "difficulty": 2,
+    "durationHrs": 14,
+    "prerequisites": [
+      "ux-basics"
+    ],
+    "description": "Typography, colour systems, components, and building a reusable design system.",
+    "project": "Build a small reusable component library in Figma with documented variants.",
+    "syllabus": [
+      {
+        "title": "Visual Foundations",
+        "topics": [
+          "Typography scale",
+          "Color systems",
+          "Spacing & grids"
+        ]
+      },
+      {
+        "title": "Components",
+        "topics": [
+          "Component anatomy",
+          "States & variants",
+          "Accessibility in components"
+        ]
+      },
+      {
+        "title": "Systemizing",
+        "topics": [
+          "Tokens",
+          "Documentation",
+          "Versioning a design system"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Define a coherent type and color system",
+      "Design components with documented states/variants",
+      "Structure a small design system with tokens"
+    ]
+  },
+  {
+    "id": "product-design-portfolio",
+    "title": "Product Design Portfolio",
+    "domain": "Design",
+    "tags": [
+      "portfolio",
+      "case-study",
+      "design",
+      "advanced"
+    ],
+    "difficulty": 3,
+    "durationHrs": 16,
+    "prerequisites": [
+      "ui-design-systems"
+    ],
+    "description": "Turn design work into case studies for a hiring-ready portfolio.",
+    "project": "Turn one of your projects into a full case study with process and outcomes.",
+    "syllabus": [
+      {
+        "title": "Selecting Work",
+        "topics": [
+          "Choosing strong case studies",
+          "Framing the problem",
+          "Highlighting your role"
+        ]
+      },
+      {
+        "title": "Writing Case Studies",
+        "topics": [
+          "Process storytelling",
+          "Before/after outcomes",
+          "Visual presentation"
+        ]
+      },
+      {
+        "title": "Portfolio Assembly",
+        "topics": [
+          "Structuring the site",
+          "Narrative flow",
+          "Getting feedback"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Turn a project into a clear, outcome-focused case study",
+      "Present design process, not just final screens",
+      "Assemble a portfolio ready to share with recruiters"
+    ]
+  },
+  {
+    "id": "biz-fundamentals",
+    "title": "Business Fundamentals",
+    "domain": "Business",
+    "tags": [
+      "business",
+      "strategy",
+      "beginner"
+    ],
+    "difficulty": 1,
+    "durationHrs": 10,
+    "prerequisites": [],
+    "description": "Business models, unit economics, and how companies create and capture value.",
+    "project": "Write a one-page business model canvas for a hypothetical product.",
+    "syllabus": [
+      {
+        "title": "Business Models",
+        "topics": [
+          "Value propositions",
+          "Revenue models",
+          "Cost structures"
+        ]
+      },
+      {
+        "title": "Unit Economics",
+        "topics": [
+          "Margins",
+          "Customer acquisition cost",
+          "Lifetime value"
+        ]
+      },
+      {
+        "title": "Strategy Basics",
+        "topics": [
+          "Competitive positioning",
+          "SWOT analysis",
+          "Market sizing"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Explain how a business creates and captures value",
+      "Reason about basic unit economics",
+      "Size a market at a rough order of magnitude"
+    ]
+  },
+  {
+    "id": "product-management",
+    "title": "Product Management Basics",
+    "domain": "Business",
+    "tags": [
+      "product",
+      "management",
+      "strategy",
+      "intermediate"
+    ],
+    "difficulty": 2,
+    "durationHrs": 14,
+    "prerequisites": [
+      "biz-fundamentals"
+    ],
+    "description": "Discovery, roadmapping, prioritization frameworks, and working with engineering.",
+    "project": "Write a PRD for a feature, including user stories and success metrics.",
+    "syllabus": [
+      {
+        "title": "Discovery",
+        "topics": [
+          "Problem discovery",
+          "User interviews",
+          "Opportunity sizing"
+        ]
+      },
+      {
+        "title": "Prioritization",
+        "topics": [
+          "RICE / ICE frameworks",
+          "Tradeoff conversations",
+          "Roadmapping"
+        ]
+      },
+      {
+        "title": "Execution",
+        "topics": [
+          "Writing a PRD",
+          "Working with engineering",
+          "Shipping & measuring"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Prioritize a backlog using a scoring framework",
+      "Write a clear, testable PRD",
+      "Define success metrics for a feature"
+    ]
+  },
+  {
+    "id": "data-driven-decisions",
+    "title": "Data-Driven Decision Making",
+    "domain": "Business",
+    "tags": [
+      "analytics",
+      "business",
+      "metrics",
+      "intermediate"
+    ],
+    "difficulty": 2,
+    "durationHrs": 12,
+    "prerequisites": [
+      "biz-fundamentals"
+    ],
+    "description": "Reading metrics, setting KPIs, and using data to guide product and business decisions.",
+    "project": "Define and track 3 KPIs for a project you're already working on.",
+    "syllabus": [
+      {
+        "title": "Metrics Foundations",
+        "topics": [
+          "Leading vs lagging indicators",
+          "North star metrics",
+          "Common pitfalls"
+        ]
+      },
+      {
+        "title": "Reading Data",
+        "topics": [
+          "Interpreting dashboards",
+          "Statistical significance basics",
+          "Avoiding vanity metrics"
+        ]
+      },
+      {
+        "title": "Applying It",
+        "topics": [
+          "Setting KPIs",
+          "A/B testing basics",
+          "Communicating data to stakeholders"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Define meaningful KPIs for a project",
+      "Distinguish signal from noise in a dashboard",
+      "Communicate a data-backed recommendation clearly"
+    ]
+  },
+  {
+    "id": "dsa-basics",
+    "title": "Data Structures & Algorithms I",
+    "domain": "Computer Science",
+    "tags": [
+      "dsa",
+      "algorithms",
+      "programming",
+      "beginner"
+    ],
+    "difficulty": 2,
+    "durationHrs": 20,
+    "prerequisites": [
+      "py-basics"
+    ],
+    "description": "Arrays, linked lists, stacks, queues, and complexity analysis.",
+    "project": "Solve and document 15 array/linked-list problems with complexity analysis.",
+    "syllabus": [
+      {
+        "title": "Linear Structures",
+        "topics": [
+          "Arrays",
+          "Linked lists",
+          "Stacks & queues"
+        ]
+      },
+      {
+        "title": "Complexity Analysis",
+        "topics": [
+          "Big-O notation",
+          "Time vs space tradeoffs",
+          "Analyzing loops/recursion"
+        ]
+      },
+      {
+        "title": "Problem Solving",
+        "topics": [
+          "Two-pointer technique",
+          "Sliding window",
+          "Basic recursion"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Implement and reason about core linear data structures",
+      "Analyze the time/space complexity of an algorithm",
+      "Apply common patterns to solve array/string problems"
+    ]
+  },
+  {
+    "id": "dsa-advanced",
+    "title": "Data Structures & Algorithms II",
+    "domain": "Computer Science",
+    "tags": [
+      "dsa",
+      "algorithms",
+      "trees",
+      "graphs",
+      "advanced"
+    ],
+    "difficulty": 3,
+    "durationHrs": 22,
+    "prerequisites": [
+      "dsa-basics"
+    ],
+    "description": "Trees, graphs, dynamic programming, and interview-style problem solving.",
+    "project": "Solve and document 15 tree/graph/DP problems with complexity analysis.",
+    "syllabus": [
+      {
+        "title": "Trees & Graphs",
+        "topics": [
+          "Binary trees & BSTs",
+          "Graph traversal (BFS/DFS)",
+          "Shortest paths"
+        ]
+      },
+      {
+        "title": "Dynamic Programming",
+        "topics": [
+          "Memoization",
+          "Tabulation",
+          "Classic DP problems"
+        ]
+      },
+      {
+        "title": "Interview Practice",
+        "topics": [
+          "Pattern recognition",
+          "Communicating your approach",
+          "Timed problem solving"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Traverse and manipulate trees and graphs",
+      "Recognize and solve DP problems systematically",
+      "Explain a solution's approach and complexity clearly"
+    ]
+  },
+  {
+    "id": "system-design-intro",
+    "title": "System Design Fundamentals",
+    "domain": "Computer Science",
+    "tags": [
+      "system-design",
+      "architecture",
+      "advanced"
+    ],
+    "difficulty": 4,
+    "durationHrs": 18,
+    "prerequisites": [
+      "dsa-advanced",
+      "web-databases"
+    ],
+    "description": "Scalability, caching, load balancing, and designing large systems.",
+    "project": "Design (on paper) a URL shortener at scale and justify each component.",
+    "syllabus": [
+      {
+        "title": "Building Blocks",
+        "topics": [
+          "Load balancers",
+          "Caching layers",
+          "Databases at scale"
+        ]
+      },
+      {
+        "title": "Scalability Patterns",
+        "topics": [
+          "Horizontal vs vertical scaling",
+          "Sharding & replication",
+          "Async processing & queues"
+        ]
+      },
+      {
+        "title": "Designing a System",
+        "topics": [
+          "Requirements gathering",
+          "High-level architecture",
+          "Tradeoff discussions"
+        ]
+      }
+    ],
+    "learningOutcomes": [
+      "Explain core scalability building blocks",
+      "Sketch a high-level architecture for a given system",
+      "Justify architecture tradeoffs under constraints"
+    ]
+  }
+]

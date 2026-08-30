@@ -1,0 +1,363 @@
+{
+  "learners": {
+    "4a72f4f5-d3bf-42e4-aad9-374ba3e98576": {
+      "id": "4a72f4f5-d3bf-42e4-aad9-374ba3e98576",
+      "name": "",
+      "goal": "Learn machine learning.",
+      "experienceLevel": "beginner",
+      "interests": [
+        "python",
+        "machine-learning"
+      ],
+      "completedCourseIds": [
+        "data-analysis"
+      ],
+      "studyHoursPerWeek": 5.5,
+      "createdAt": "2026-08-30T15:41:10.498Z",
+      "updatedAt": "2026-08-30T17:55:49.281Z"
+    },
+    "891c645b-0f4f-4240-b3ce-42e63a77a5d4": {
+      "id": "891c645b-0f4f-4240-b3ce-42e63a77a5d4",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T15:41:10.517Z",
+      "updatedAt": "2026-08-30T15:41:10.517Z"
+    },
+    "d69b22b4-6872-4e42-a628-e85fe28faa29": {
+      "id": "d69b22b4-6872-4e42-a628-e85fe28faa29",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T16:29:17.136Z",
+      "updatedAt": "2026-08-30T16:29:17.136Z"
+    },
+    "574a2ca2-b48a-4df2-a9de-b255713b51c3": {
+      "id": "574a2ca2-b48a-4df2-a9de-b255713b51c3",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T16:29:46.775Z",
+      "updatedAt": "2026-08-30T16:29:46.775Z"
+    },
+    "fed39ca3-6f7f-4e88-9acd-f3461ddc4bec": {
+      "id": "fed39ca3-6f7f-4e88-9acd-f3461ddc4bec",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T16:29:46.806Z",
+      "updatedAt": "2026-08-30T16:29:46.806Z"
+    },
+    "3be6172e-736a-42b2-8bcf-bce56c34b1ae": {
+      "id": "3be6172e-736a-42b2-8bcf-bce56c34b1ae",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T16:29:47.136Z",
+      "updatedAt": "2026-08-30T16:29:47.136Z"
+    },
+    "b179cf66-5328-4b3b-bd3a-d9de36d3526f": {
+      "id": "b179cf66-5328-4b3b-bd3a-d9de36d3526f",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T16:29:47.147Z",
+      "updatedAt": "2026-08-30T16:29:47.147Z"
+    },
+    "23c97528-f5d0-484e-940d-e5e29f9d12ed": {
+      "id": "23c97528-f5d0-484e-940d-e5e29f9d12ed",
+      "name": null,
+      "goal": null,
+      "experienceLevel": "beginner",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T16:29:47.437Z",
+      "updatedAt": "2026-08-30T16:29:47.437Z"
+    },
+    "343cc0dc-c155-45fb-89c5-ae77da6fd9e2": {
+      "id": "343cc0dc-c155-45fb-89c5-ae77da6fd9e2",
+      "name": "",
+      "goal": "",
+      "experienceLevel": "intermediate",
+      "interests": [],
+      "completedCourseIds": [],
+      "studyHoursPerWeek": null,
+      "createdAt": "2026-08-30T16:29:47.669Z",
+      "updatedAt": "2026-08-30T18:43:16.286Z"
+    }
+  },
+  "messages": {
+    "4a72f4f5-d3bf-42e4-aad9-374ba3e98576": [
+      {
+        "role": "user",
+        "content": "I know basic Python and want to learn machine learning",
+        "createdAt": "2026-08-30T15:45:13.706Z"
+      },
+      {
+        "role": "assistant",
+        "content": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "createdAt": "2026-08-30T15:45:13.715Z"
+      },
+      {
+        "role": "user",
+        "content": "I know basic Python and want to learn machine learning\n",
+        "createdAt": "2026-08-30T17:03:24.793Z"
+      },
+      {
+        "role": "assistant",
+        "content": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "createdAt": "2026-08-30T17:03:26.443Z"
+      },
+      {
+        "role": "user",
+        "content": "i want to learn python ",
+        "createdAt": "2026-08-30T17:49:26.804Z"
+      },
+      {
+        "role": "assistant",
+        "content": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "createdAt": "2026-08-30T17:49:28.068Z"
+      },
+      {
+        "role": "user",
+        "content": "I know basic Python and want to learn machine learning\nY\n◆\n(AI assistant offline — set GEMINI_API_KEY in .env to enable",
+        "createdAt": "2026-08-30T17:55:13.389Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Great to meet you! Having a foundation in basic Python is the perfect starting point for stepping into machine learning. \n\nI've updated your profile to reflect your background and goals. I'm tailoring your personalized roadmap now with the best beginner-friendly ML courses!",
+        "createdAt": "2026-08-30T17:56:36.996Z"
+      }
+    ]
+  },
+  "paths": {
+    "4a72f4f5-d3bf-42e4-aad9-374ba3e98576": [
+      {
+        "id": 1,
+        "courseId": "ml-foundations",
+        "position": 0,
+        "milestone": "Milestone 1",
+        "score": 0.32499999999999996,
+        "status": "planned",
+        "explanation": "This course is recommended because you fully meet the prerequisites with a 100% readiness score, making you completely prepared to begin. Although it moderately matches your interests at 50%, it currently has a lower direct goal relevance score of 25% for your machine learning objective.",
+        "source": "recommended",
+        "createdAt": "2026-08-30T18:05:06.246Z"
+      },
+      {
+        "id": 2,
+        "courseId": "py-basics",
+        "position": 1,
+        "milestone": "Milestone 1",
+        "score": 0.075,
+        "status": "planned",
+        "explanation": "This course was recommended because you are 100% ready for its prerequisites, giving you a solid foundational starting point. However, keep in mind that it currently has 0% direct relevance to your machine learning goal and only a 25% match with your general interests.",
+        "source": "recommended",
+        "createdAt": "2026-08-30T18:05:06.246Z"
+      },
+      {
+        "id": 3,
+        "courseId": "data-viz",
+        "position": 2,
+        "milestone": "Milestone 2",
+        "score": 0.049999999999999996,
+        "status": "planned",
+        "explanation": "This course was recommended because you are 100% ready for its prerequisites, making it an accessible option for your current skill level. However, it has 0% direct relevance to your goal of learning machine learning and only a 17% match with your personal interests.",
+        "source": "recommended",
+        "createdAt": "2026-08-30T18:05:06.246Z"
+      },
+      {
+        "id": 4,
+        "courseId": "deep-learning",
+        "position": 3,
+        "milestone": "Milestone 2",
+        "score": 0.03,
+        "status": "planned",
+        "explanation": "This course was suggested based solely on a slight 20% match with your general interests. However, it is likely not the right fit yet, as it scored 0% for direct relevance to your machine learning goal and 0% for your prerequisite readiness.",
+        "source": "recommended",
+        "createdAt": "2026-08-30T18:05:06.246Z"
+      },
+      {
+        "id": 5,
+        "courseId": "nlp-basics",
+        "position": 4,
+        "milestone": "Milestone 3",
+        "score": 0.03,
+        "status": "planned",
+        "explanation": "This course was recommended solely because it has a slight 20% match with your general interests. However, it does not align with your goal to learn machine learning or your current prerequisite readiness, as both received a 0% score.",
+        "source": "recommended",
+        "createdAt": "2026-08-30T18:05:06.246Z"
+      }
+    ],
+    "343cc0dc-c155-45fb-89c5-ae77da6fd9e2": [
+      {
+        "id": 1,
+        "courseId": "web-html-css",
+        "position": 0,
+        "milestone": "Milestone 1",
+        "score": 0,
+        "status": "planned",
+        "explanation": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "source": "recommended",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 2,
+        "courseId": "web-js-basics",
+        "position": 1,
+        "milestone": "Milestone 1",
+        "score": 0,
+        "status": "planned",
+        "explanation": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "source": "recommended",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 3,
+        "courseId": "web-react",
+        "position": 2,
+        "milestone": "Milestone 2",
+        "score": 0,
+        "status": "planned",
+        "explanation": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "source": "recommended",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 4,
+        "courseId": "web-nextjs",
+        "position": 3,
+        "milestone": "Milestone 2",
+        "score": 0,
+        "status": "planned",
+        "explanation": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "source": "recommended",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 5,
+        "courseId": "web-node-express",
+        "position": 4,
+        "milestone": "Milestone 3",
+        "score": 0,
+        "status": "planned",
+        "explanation": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "source": "recommended",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 6,
+        "courseId": "web-databases",
+        "position": 5,
+        "milestone": "Milestone 3",
+        "score": 0,
+        "status": "planned",
+        "explanation": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "source": "recommended",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 7,
+        "courseId": "py-basics",
+        "position": 6,
+        "milestone": "Milestone 4",
+        "score": 0,
+        "status": "planned",
+        "explanation": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "source": "recommended",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 8,
+        "courseId": "data-analysis",
+        "position": 7,
+        "milestone": "Milestone 4",
+        "score": 0,
+        "status": "planned",
+        "explanation": "(AI assistant offline — set GEMINI_API_KEY in .env to enable conversational replies and explanations. Everything else — profiling, recommendations, and the roadmap — still works from your inputs.)",
+        "source": "recommended",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 9,
+        "courseId": "ml-foundations",
+        "position": 8,
+        "milestone": "Milestone 5",
+        "score": 0,
+        "status": "planned",
+        "explanation": "Required prerequisite for \"Generative AI & LLM Applications\", which you added manually.",
+        "source": "manual",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 10,
+        "courseId": "genai-llm",
+        "position": 9,
+        "milestone": "Milestone 5",
+        "score": 0,
+        "status": "planned",
+        "explanation": "Added manually from the course explorer.",
+        "source": "manual",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      },
+      {
+        "id": 11,
+        "courseId": "deep-learning",
+        "position": 10,
+        "milestone": "Milestone 6",
+        "score": 0,
+        "status": "planned",
+        "explanation": "Added manually from the course explorer.",
+        "source": "manual",
+        "createdAt": "2026-08-30T16:41:15.094Z"
+      }
+    ]
+  },
+  "feedback": {
+    "4a72f4f5-d3bf-42e4-aad9-374ba3e98576": [
+      {
+        "courseId": "data-analysis",
+        "action": "completed",
+        "rating": null,
+        "createdAt": "2026-08-30T15:42:04.130Z"
+      },
+      {
+        "courseId": "data-analysis",
+        "action": "completed",
+        "rating": null,
+        "createdAt": "2026-08-30T15:42:06.625Z"
+      },
+      {
+        "courseId": "web-js-basics",
+        "action": "in_progress",
+        "rating": null,
+        "createdAt": "2026-08-30T15:42:13.162Z"
+      },
+      {
+        "courseId": "web-html-css",
+        "action": "in_progress",
+        "rating": null,
+        "createdAt": "2026-08-30T15:42:15.493Z"
+      }
+    ]
+  },
+  "assessments": {}
+}
