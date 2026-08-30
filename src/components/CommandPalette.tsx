@@ -40,10 +40,10 @@ export default function CommandPalette() {
 
   const navCommands: Command[] = useMemo(
     () => [
-      { id: "nav-chat", label: "Go to Chat", hint: "intake", action: () => router.push("/") },
+      { id: "nav-dashboard", label: "Go to Dashboard", hint: "progress", action: () => router.push("/") },
+      { id: "nav-chat", label: "Go to Chat", hint: "intake", action: () => router.push("/chat") },
       { id: "nav-courses", label: "Go to Course Explorer", hint: "browse catalog", action: () => router.push("/courses") },
       { id: "nav-roadmap", label: "Go to Roadmap", hint: "your path", action: () => router.push("/roadmap") },
-      { id: "nav-dashboard", label: "Go to Dashboard", hint: "progress", action: () => router.push("/dashboard") },
       { id: "nav-achievements", label: "Go to Achievements", hint: "XP, streaks, badges", action: () => router.push("/achievements") },
       { id: "nav-skills", label: "Go to Skills", hint: "mastery breakdown", action: () => router.push("/skills") },
       { id: "nav-certificate", label: "Go to Certificate", hint: "unlocks at 100%", action: () => router.push("/certificate") },

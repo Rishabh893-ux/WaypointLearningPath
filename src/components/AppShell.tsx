@@ -90,8 +90,8 @@ function UserIcon(p: { className?: string }) {
 }
 
 const NAV = [
-  { href: "/dashboard", label: "Dashboard", icon: GridIcon },
-  { href: "/", label: "Chat", icon: ChatIcon },
+  { href: "/", label: "Dashboard", icon: GridIcon },
+  { href: "/chat", label: "Chat", icon: ChatIcon },
   { href: "/courses", label: "Courses", icon: BookIcon },
   { href: "/roadmap", label: "Roadmap", icon: MapIcon },
   { href: "/skills", label: "Skills", icon: BrainIcon },
